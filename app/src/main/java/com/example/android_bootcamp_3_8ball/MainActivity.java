@@ -13,10 +13,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     Context context = this;
-
-    ImageView imageId;
-
-
+    //ImageView imageId;
     Button buttonId;
 
     @Override
@@ -25,11 +22,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        imageId = findViewById(R.id.imageId);
+
+        final ImageView imageId = findViewById(R.id.imageId);
         buttonId = findViewById(R.id.buttonId);
 
 
-        final int[] images = {
+        final int[] images = new int[] {
                 R.drawable.ball1,
                 R.drawable.ball2,
                 R.drawable.ball3,
@@ -44,10 +42,11 @@ public class MainActivity extends AppCompatActivity {
                 Random randomNumGen = new Random();
                 int randomNum = randomNumGen.nextInt(5);
 
+
                 imageId.setImageResource(images[(randomNum)]);
 
 
-                Toast.makeText(context, "AAA" + randomNum, Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(context, "AAA" + randomNum, Toast.LENGTH_SHORT).show();
 
             }
         });
